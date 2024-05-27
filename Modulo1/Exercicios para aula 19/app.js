@@ -10,8 +10,8 @@
 02 - Armazene um array vazio em uma let "brazilianFoods";
 */
 
-
 let brazilianFoods = [];
+
 
 
 /*
@@ -23,6 +23,10 @@ let brazilianFoods = [];
 - Exiba a brazilianFoods no console.
 */
 
+brazilianFoods = ["Coxinha", "null", "Brigadeiro"];
+//console.log(brazilianFoods)
+
+
 
 
 /*
@@ -33,6 +37,8 @@ array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
 - Exiba apenas o 2º item desse array no console.
 */
 
+brazilianFoods[1] = "Pão de Queijo"
+//console.log(brazilianFoods)
 
 
 /*
@@ -48,6 +54,16 @@ mas sem digitar os nomes das comidas diretamente;
 - Exiba a foodsInfo no console.
 */
 
+const numeroDeItems = brazilianFoods.length;
+
+const comida1 = brazilianFoods[0];
+const comida2 = brazilianFoods[1];
+const comida3 = brazilianFoods[2];
+
+const foodsInfo = `Até aqui, o array "brazilianFoods" possui ${numeroDeItems} itens: ${comida3}, ${comida2} e ${comida3}.`;
+
+//console.log(foodsInfo)
+
 
 
 /*
@@ -62,6 +78,12 @@ itens "Lilica" e "Matilda";
 - Exiba a "dogNames" no console.
 */
 
+const maleDogNames = ["Chico", "Zeca"];
+const femaleDogNames = ["Lilica", "Lilica"];
+
+const dogNames = maleDogNames.concat(femaleDogNames);
+//console.log(dogNames)
+
 
 
 /*
@@ -72,6 +94,8 @@ itens "Lilica" e "Matilda";
 - Utilize o método adequado para fazer isso;
 - O resultado deve ser: "nome1, nome2, nome3, nome4".
 */
+
+//console.log(dogNames.join(" , "))
 
 
 
@@ -88,6 +112,7 @@ utilizando o método adequado para isso;
 agora é "Lilica".
 */
 
+//console.log(dogNames.pop())
 
 
 /*
@@ -101,6 +126,9 @@ apenas as letras iniciais dos nomes do array "dogNames";
 - Não digite as letras diretamente;
 - Exiba a "initials" no console.
 */
+const initials = `${dogNames.map(caracter => caracter[0])}`
+
+//console.log(initials)
 
 
 
@@ -110,6 +138,8 @@ apenas as letras iniciais dos nomes do array "dogNames";
 - Exiba a "initials" no console, mas com todas as letras minúsculas;
 - Utilize o método adequado para isso.
 */
+
+console.log(initials.toLowerCase())
 
 
 
@@ -129,6 +159,15 @@ constante que você criou.
 'A SOBREMESA é um doce à base de coco, tradicional na América Latina e em Angola.'
 */
 
+// Criação da string 'cocana' a partir das partes dos nomes dos cachorros
+const dessert = `${dogNames[0].slice(0, 2)}${dogNames[1].slice(1, 3)}${dogNames[3].slice(0, 2)}`;
+
+// Substituindo a última letra 'n' por 'd'
+const finalDessert = dessert.replace('n', 'd');
+
+// Exibindo a string final no console
+console.log(`A ${finalDessert} é um doce à base de coco, tradicional na América Latina e em Angola.`);
+
 
 
 /*
@@ -143,3 +182,14 @@ elevado ao cubo, faça o 2º item do array receber todo o valor que ele
 já tem, mais 4;
 - Agora, o resultado exibido no console deve ser 729.
 */
+let oddNumbers = [3, 5, 7];
+
+oddNumbers[1] = oddNumbers[1] + 4
+
+console.log(oddNumbers[1] ** 3)
+
+
+
+
+
+
