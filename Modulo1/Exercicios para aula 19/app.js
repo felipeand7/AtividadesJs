@@ -126,6 +126,8 @@ apenas as letras iniciais dos nomes do array "dogNames";
 - Não digite as letras diretamente;
 - Exiba a "initials" no console.
 */
+
+dogNames.push("Nina")
 const initials = `${dogNames.map(caracter => caracter[0])}`
 
 //console.log(initials)
@@ -160,10 +162,7 @@ constante que você criou.
 */
 
 // Criação da string 'cocana' a partir das partes dos nomes dos cachorros
-const dessert = `${dogNames[0].slice(0, 2)}${dogNames[1].slice(1, 3)}${dogNames[3].slice(0, 2)}`;
-
-// Substituindo a última letra 'n' por 'd'
-const finalDessert = dessert.replace('n', 'd');
+const dessert = `${dogNames[0].slice(0, 2)}${dogNames[1].slice(1, 3)}${dogNames[3].slice(0, 2)}`.replace("n", "d");
 
 // Exibindo a string final no console
 console.log(`A ${finalDessert} é um doce à base de coco, tradicional na América Latina e em Angola.`);
@@ -184,7 +183,7 @@ já tem, mais 4;
 */
 let oddNumbers = [3, 5, 7];
 
-oddNumbers[1] = oddNumbers[1] + 4
+oddNumbers[1] = + 4
 
 console.log(oddNumbers[1] ** 3)
 
