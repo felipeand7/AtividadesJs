@@ -57,11 +57,16 @@ const fruits = ['morango', 'banana', 'mamão']
 
   - Utilize um for loop para gerar um novo array com apenas os números entre  
     11 e 90 presentes no array "numbers" (incluindo 11 e 90);
-  - Exiba o novo array no console;
-  - O resultado deve ser: [34, 46, 90, 25, 11, 89, 76].
+f  - O resultado deve ser: [34, 46, 90, 25, 11, 89, 76].
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+
+
+for (let index = 0; index < numbers.length; index++) {
+  const element = array[index];
+
+}
 
 /*
   05

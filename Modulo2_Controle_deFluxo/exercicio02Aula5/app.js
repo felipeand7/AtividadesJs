@@ -21,6 +21,12 @@
     5
 */
 
+//let i = 0
+
+//while (i < 5) {
+//i++
+//console.log(i)
+//}
 
 
 /*
@@ -30,6 +36,9 @@
 */
 
 
+//for (var i = 0; i < 5; i++) {  // i = 0 quanto i for meno do que 0 sera adicionado +1 ate que esse valor utrapasse 5 e retorne false
+//console.log(i)
+//}
 
 /*
   03 - Comente o loop acima e:
@@ -41,6 +50,11 @@
 
   "Esta é a Xª vez que esta frase é exibida no console."
 */
+
+//for (var X = 1; X < 11; X++) {
+//console.log(X + "x")
+//}
+
 
 
 
@@ -54,7 +68,13 @@
   - Para ver se deu certo, exiba o upperCaseCities no console.
 */
 
-const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
+//const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
+//let upperCaseCities = []
+
+//for (let i = 0; i < cities.length; i++) {
+//  upperCaseCities.push(cities[i].toUpperCase())  // push serve para subistir itens de uma arrey, ja o toupprcase converte minuscula em maiuscula
+//}
+//console.log(upperCaseCities)
 
 /*
   05 - Comente o console.log acima e:
@@ -67,6 +87,17 @@ const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
 
 const names = ['João Grilo', 'Chicó', 'Rosinha']
 
+
+// Inicializamos uma variável para armazenar o template HTML
+//let htmlTamplete = ``
+
+// Utilizamos um for loop para gerar o template HTML
+
+//for (let i = 0; i < names.length; i++) {
+// htmlTamplete += `<li>${names[i]}</li>`
+//}
+//console.log(htmlTamplete)
+
 /*
   06 - Comente o console.log acima e:
 
@@ -76,14 +107,21 @@ const names = ['João Grilo', 'Chicó', 'Rosinha']
   - O console deve exibir true.
 */
 
-const numbers = ['91', '5', '30', '97', '83', '31']
+// const numbers = ['91', '5', '30', '97', '83', '31']
+
+// var soma = 0
+
+// for (var i = 0; i < numbers.length; i++) {
+//   soma += Number(numbers[i])
+// }
+// console.log(soma ===)
+
 
 /*
   07 - Comente o console.log acima.
-
   Este exercício é um pouco mais complexo que os anteriores. Não se preocupe  
   muito caso você não acerte ele. Apenas tente resolvê-lo com o conhecimento  
-  adquirido até aqui.
+  adquirido até aqui. 
 
   - O JavaScript permite você criar arrays dentro de um outro array. Isso é  
     chamado de aninhamento de arrays, ou nested arrays em inglês. Por isso, o  
@@ -92,7 +130,7 @@ const numbers = ['91', '5', '30', '97', '83', '31']
   - Abaixo do array "arrays", utilizando o for loop, some todos os números  
     destes arrays.
   - Após o for, exiba no console o resultado, que deve ser 218.
-
+ 
   Dica: você pode colocar um loop dentro do outro, ou seja, aninhá-los. =)
 */
 
@@ -102,3 +140,17 @@ const arrays = [
   [8, 32, 16],
   [2, 8, 4]
 ]
+
+let soma = 0
+
+for (var i = 0; i < arrays.length; i++) {
+  console.log(arrays[i]) // listando todos os intens da 
+
+  for (let j = 0; j < arrays[i].length; j++) {
+
+    soma += Number(arrays[i][j])
+  }
+
+}
+
+console.log(soma)

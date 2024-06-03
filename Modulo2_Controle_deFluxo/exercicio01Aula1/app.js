@@ -136,7 +136,6 @@ const agesSum = ages[0] + ages[2]; // pegando os dois index para fazer a soma do
 
 /*
   09 - Comente o console.log() acima e:
-
   - Armazene em uma const "isNotAString" uma expressão que verifica se o tipo de  
     dado que a "randomTVShow" armazena não é uma string;
   - Essa expressão deve resultar em false.
@@ -146,15 +145,12 @@ const agesSum = ages[0] + ages[2]; // pegando os dois index para fazer a soma do
 const isNotAString = randomTVShow === String
 console.log(isNotAString)
 
-
-
 /*
-  10 - Comente o console.log() acima e:
-
+  10 - Comente o console.log() acima e:  
   - Abaixo da constante "evenNumbers", exiba no console um boolean que indica se  
     o número 8 existe no array;
   - Não utilize o método includes desta vez.
-*/
+  */
 
 const evenNumbers = [0, 2, 4, 6, 8, 10]
-console.log(evenNumbers.indexOf(8) !== -1)  // com o indexOf estou buscando o item na arry na qual retorna a sua posiçao, em seguida eu estou verificando se o dados retornado pelo indexOf e -1 para me retornar um boolean
+console.log(evenNumbers.indexOf(8) !== -1); // com o indexOf estou buscando o item na arry na qual retorna a sua posiçao, em seguida eu estou verificando se o dados retornado pelo indexOf e -1 para me retornar um boolean

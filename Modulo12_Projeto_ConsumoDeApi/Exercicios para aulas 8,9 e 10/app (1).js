@@ -25,9 +25,9 @@
 */
 
 const topics = [
-  { id: 1, name: 'Artes & cultura'},
-  { id: 2, name: 'Negócios & finanças'},
-  { id: 3, name: 'Carreiras'}
+  { id: 1, name: 'Artes & cultura' },
+  { id: 2, name: 'Negócios & finanças' },
+  { id: 3, name: 'Carreiras' }
 ]
 
 /*
@@ -47,7 +47,7 @@ const colors = ['#FF00FF', ['#FF0D0D', '#0AFA00', '#011EFA'], '#7BF0FF']
   - Observe que ela recebe 2 argumentos, um objeto e uma string;
   - Dentro da declaração da função:
     - Faça um destructuring no objeto recebido no 1º argumento;
-    - No destructuring, nomeie de forma dinâmica a const que você está 
+    - No destructuring, nomeie de forma dinâmica a const que você está
       declarando, usando o 2º argumento que a invocação da função recebeu.
       Você já conhece a sintaxe que nomeia de forma dinâmica;
     - Atribua "desconhecido" como valor default da const do destructuring;
