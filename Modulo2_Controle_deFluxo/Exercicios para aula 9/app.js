@@ -25,22 +25,46 @@
 
 const fruits = ['morango', 'banana', 'mamão']
 
+/*if (fruits.includes("abacaxi")) { 
+  
+  //O método includes( )determina se um array contém um elemento específico, retornando trueou false
+  
+  console.log("A string abacaxi existe no array fruits.")
+} else if (fruits.includes("pera")) {
+  console.log("A string pera existe no array fruits.")
+} else {
+  console.log("Nem pera nem abacaxi existem no array ")
+}
+*/
+
 /*
   02
-
+ 
   - Armazene em uma constante apenas a hora atual na qual você está fazendo este  
     exercício. Ex.: 18;
   - À partir das 6, exiba "Bom dia!" no console;
   - À partir das 12, exiba "Boa tarde!";
   - À partir das 18, exiba "Boa noite!".
-
+ 
   Obs.: tanto a expressão do lado esquerdo quanto a do lado direito do operador  
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
 
+const hour = 12
+
+
+// if (hour >= 5 && hour < 12) {
+//   alert("Bom diaaaaa")
+// } else if (hour >= 12 && hour < 18) {
+//   alert("Boa tardeeeeee")
+// } else if (hour >= 18 && hour < 23) {
+//   alert("Boa noite")
+// }
+
+
 /*
   03
-
+ 
   - Armazene sua idade em uma constante;
   - Escreva uma estrutura condicional em que, se a idade é 7 anos ou menos, ou  
     se a idade é 65 anos ou mais, a frase "Para você, a entrada é grátis!" é  
@@ -52,21 +76,32 @@ const fruits = ['morango', 'banana', 'mamão']
     também está funcionando.
 */
 
+
+// const idade = prompt("Digite a sua idade")
+
+// if (Number(idade) <= 7 || Number(idade) >= 65) {
+//   alert("Para você, a entrada é grátis!")  
+// } else {
+//   confirm("A entrada é R$ 30,00, deseja comprar?")
+// }
+
+
 /*
   04
-
   - Utilize um for loop para gerar um novo array com apenas os números entre  
     11 e 90 presentes no array "numbers" (incluindo 11 e 90);
 f  - O resultado deve ser: [34, 46, 90, 25, 11, 89, 76].
 */
 
-const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+// const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+// const filteredNumbers = [];
 
-
-for (let index = 0; index < numbers.length; index++) {
-  const element = array[index];
-
-}
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] >= 11 && numbers[i] <= 90) {
+//     filteredNumbers.push(numbers[i]) //Se o número atual atende à condição (ou seja, está entre 11 e 90, inclusive), ele é adicionado ao array filteredNumbersusando o método push.
+//   }
+// }
+// console.log(filteredNumbers)
 
 /*
   05
@@ -81,11 +116,30 @@ for (let index = 0; index < numbers.length; index++) {
   "O crazyArray tem X booleans, X números e X strings."
 */
 
+
+let numbers = []
+let strings = []
+let booleans = []
+
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
 
-/*
-  06
 
+for (let i = 0; i < crazyArray.length; i++) { // lenhth <--- para pega a quantidade de intens na arrys
+  const verificarDados = typeof crazyArray
+  const dados = crazyArray[i];
+
+  if (verificarDados === 'string') { //typeof <--- Para ver que tipo de dado é m, se String | Nunber ou Boolean 
+    strings.push(dados) // push  <--- para inserir intems na arrys 
+  } else if (verificarDados === 'number') { //typeof <--- Para ver que tipo de dado é m, se String | Nunber ou Boolean 
+    numbers.push(dados) // push  <--- para inserir intems na arrys 
+  } else if (verificarDados === 'boolean') { //typeof <--- Para ver que tipo de dado é m, se String | Nunber ou Boolean 
+    booleans.push(dados) // push  <--- para inserir intems na arrys 
+  }
+}
+//console.log(`O crazyArray tem ${booleans.length} booleans, ${numbers.length} números e ${strings.length} strings.`)
+
+/*
+ 
   - Abaixo do array "randomNumbers", utilize um for loop para gerar 2 novos  
     arrays: um array com apenas os números ímpares do "randomNumbers" e um outro  
     array com apenas os números pares;
@@ -96,8 +150,30 @@ const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false
   
   - Dica: para saber se um número é par, o restante da divisão dele por 2 deve  
     ser 0.
-
+ 
   "Numeros ímpares: XX, XX e XX. Números pares: XX, XX e XX."
 */
 
 const randomNumbers = [73, 4, 67, 10, 31, 58]
+
+let impar = []
+let par = []
+
+for (let i = 0; i < randomNumbers.length; i++) {
+  const number = randomNumbers[i]
+  const verificar = number % 2 === 0;
+
+
+
+  if (verificar) {
+    par.push(number)
+  } else {
+    impar.push(number)
+  }
+}
+
+const addItemsImpar = impar.join(" ,").replace(",3", " e 3")
+const addItemsPar = par.join(" ,").replace(",58", " e 58")
+
+
+//console.log(`Numeros ímpares: ${addItemsImpar}. Números pares: ${addItemsPar}`)
