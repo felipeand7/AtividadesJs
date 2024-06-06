@@ -163,7 +163,7 @@ for (let i = 0; i < randomNumbers.length; i++) {
   const number = randomNumbers[i]
   const verificar = number % 2 === 0;
 
-
+  const atualizarArrey = par.push(number)
 
   if (verificar) {
     par.push(number)
@@ -172,7 +172,7 @@ for (let i = 0; i < randomNumbers.length; i++) {
   }
 }
 
-const addItemsImpar = impar.join(" ,").replace(",3", " e 3")
+const addItemsImpar = impar.join(" ,").replace(",3", " e 3") ///Metodo Join para adicionar elementos entre as arreys como . , | Oreplace serve para subistituir um intem por outro, ou seja, modificar
 const addItemsPar = par.join(" ,").replace(",58", " e 58")
 
 
