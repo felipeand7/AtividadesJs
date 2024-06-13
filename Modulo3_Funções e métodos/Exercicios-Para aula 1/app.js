@@ -189,14 +189,14 @@ const a = 2
 
 
 switch (a) {
-  case 0: //console.log(`O valor de "a" é ${a}`)
+  case 0: //"console.log(`O valor de "a" é ${a}`)
     break
-  case 1: //console.log(`O valor de "a" é ${a}`)
+  case 1: //"console.log(`O valor de "a" é ${a}`)
     break
-  case 2: //console.log(`O valor de "a" é ${a}`)
+  case 2: //"console.log(`O valor de "a" é ${a}`)
     break
 
-  default: //console.log('O valor de "a" é qualquer número, exceto 0 e 1')
+  default: //"console.log('O valor de "a" é qualquer número, exceto 0 e 1')
     break
 
 }
