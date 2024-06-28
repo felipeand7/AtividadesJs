@@ -13,65 +13,93 @@
     valor no console.
 */
 
-function convertToString (value) {
-  return String(value)
-}
+let convertToString = value => String(value = " ")
 
+//console.log(convertToString)
 /*
   02
-
+ 
   - Crie uma função que retorne a quantidade de caracteres que uma string  
     recebida por parâmetro possui.
 */
 
+function stringCacter(value = "sasasa") {
+  const contador = value.length
+  //console.log(contador)
+}
+
+//stringCacter("Felipe Andrade")
+
 /*
   03
-
+ 
   - Crie uma função que retorne todos os caracteres de uma string em letras  
     minúsculas;  
   - Utilize a função para exibir a string abaixo no console.
-
+ 
   "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
 */
 
+function convertString(value = "Felipe Andrade") {
+  const convert = value.toLocaleUpperCase("teste");
+  // console.log(convert)
+}
+//const text = "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
+//convertString(text)
+
 /*
   04
-
+ 
   - Crie uma função que recebe 2 parâmetros: um caractere e uma string;
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
 
+function dupleDados(number = 9, text = "felipe andrade") {
+  let textString = text.indexOf('andrade');
+  let numberindex = number.indexOf(9);
+}
+//dupleDados()
+
+
+
 /*
   05
-
+ 
   - Crie uma função que, ao ser invocada, retorna um boolean indicando se o item  
     passado por argumento existe no array (também passado por argumento).
 */
 
+
+
+function verificarArrey(item, items) {
+  return items.includes(item)
+}
+console.log(verificarArrey("camisa", ['camisa', 'bermuda', "short"]))
+
 /*
   06
-
+ 
   - Crie uma função que retorna a concatenação de 2 arrays, passados como  
     argumentos em sua invocação;
 */
 
 /*
   07
-
+ 
   - Crie uma função que retorna o array passado como argumento em sua invocação,  
     mas com o último item removido.
 */
 
 /*
   08
-
+ 
   - Crie uma função que retorna se o valor passado como argumento em sua  
     invocação é null.
 */
 
 /*
   09
-
+ 
   - Crie uma função que apenas invoca uma função de callback recebida por  
     parâmetro;
   - Crie outra função que apenas exibe seu nome no console;
@@ -82,7 +110,7 @@ function convertToString (value) {
 
 /*
   10
-
+ 
   - Crie uma função que invoca uma função de callback recebida por parâmetro.  
     A invocação da função recebida por parâmetro deve receber um valor como  
     argumento;
@@ -93,7 +121,7 @@ function convertToString (value) {
 
 /*
   11
-
+ 
   - Utilizando um forEach, baseado no array "numbers", a cada iteração, exiba a  
     mensagem abaixo no console, substituindo os "X" pelas informações corretas;
   
@@ -104,7 +132,7 @@ const numbers = [1, 2, 3]
 
 /*
   12
-
+ 
   - Converta o for loop abaixo em um forEach;
   - Após a conversão, verifique se a cópia do array lettersCopy realmente foi  
     criada.
@@ -119,18 +147,18 @@ for (let i = 0; i < letters.length; i++) {
 
 /*
   13
-
+ 
   - Inclua o markup abaixo em seu index.html;
   - Gere um template HTML com parágrafos. Cada parágrafo deve conter um item do  
     array "review";
   - Ao gerar o template, verifique no browser se os parágrafos foram incluídos  
     dentro da section vazia do markup abaixo.
-
+ 
   <article>
     <header>
       <h1>Sobre "Jurassic Park"</h1>
     </header>
-
+ 
     <section data-js="section"></section>
   </article>
 */
@@ -146,7 +174,7 @@ const review = [
 
 let paragraphs = ''
 
-section.innerHTML = paragraphs
+//section.innerHTML = paragraphs
 
 /*
   14
