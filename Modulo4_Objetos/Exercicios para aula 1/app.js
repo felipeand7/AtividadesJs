@@ -74,14 +74,22 @@ function dupleDados(number = 9, text = "felipe andrade") {
 function verificarArrey(item, items) {
   return items.includes(item)
 }
-console.log(verificarArrey("camisa", ['camisa', 'bermuda', "short"]))
+//console.log(verificarArrey("camisa", ['camisa', 'bermuda', "short"]))
 
 /*
   06
  
   - Crie uma função que retorna a concatenação de 2 arrays, passados como  
     argumentos em sua invocação;
+
 */
+
+/*function concatenaArrey(arrey1, arrey2) {
+  let arreySoma = [...arrey1, ...arrey2];
+  return arreySoma
+}*?
+
+//console.log(concatenaArrey([1, 2, 3, 4, 5], [12, 3, 2, 1]))
 
 /*
   07
@@ -89,6 +97,15 @@ console.log(verificarArrey("camisa", ['camisa', 'bermuda', "short"]))
   - Crie uma função que retorna o array passado como argumento em sua invocação,  
     mas com o último item removido.
 */
+
+
+function argurmentarArrey(arrey) {
+  return arrey.slice(0, -1)
+}
+
+
+console.log(argurmentarArrey([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
 
 /*
   08
