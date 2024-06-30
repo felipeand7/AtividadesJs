@@ -6,16 +6,24 @@
     para relembrar.
 */
 
-/*
+/* 
   01
 
   - Converta a função abaixo em uma arrow function e utilize-a para exibir um  
     valor no console.
 */
 
-let convertToString = value => String(value = " ")
+// Função original:
+//function convertToString(value) {
+//return String(value);
+//
 
-//console.log(convertToString)
+// Convertendo para arrow function:
+let convertToString = value => String(value);
+
+// Teste
+//console.log(convertToString(123)); // "123"
+
 /*
   02
  
@@ -23,12 +31,14 @@ let convertToString = value => String(value = " ")
     recebida por parâmetro possui.
 */
 
-function stringCacter(value = "sasasa") {
-  const contador = value.length
-  //console.log(contador)
+// Função para contar caracteres:
+function contarCaracteres(string) {
+  return string.length;
 }
 
-//stringCacter("Felipe Andrade")
+// Teste
+//console.log(contarCaracteres("Felipe Andrade")); // 14
+
 
 /*
   03
@@ -40,12 +50,15 @@ function stringCacter(value = "sasasa") {
   "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
 */
 
-function convertString(value = "Felipe Andrade") {
-  const convert = value.toLocaleUpperCase("teste");
-  // console.log(convert)
+// Função para converter string para minúsculas:
+function converterParaMinusculas(string) {
+  return string.toLowerCase();
 }
-//const text = "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
-//convertString(text)
+
+// Teste
+const texto = "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO";
+//console.log(converterParaMinusculas(texto)); // "chocotone e ovo de páscoa juntos no mercado em pleno fevereiro"
+
 
 /*
   04
@@ -54,11 +67,13 @@ function convertString(value = "Felipe Andrade") {
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
 
-function dupleDados(number = 9, text = "felipe andrade") {
-  let textString = text.indexOf('andrade');
-  let numberindex = number.indexOf(9);
+// Função para encontrar o índice de um caractere em uma string:
+function encontrarIndice(caractere, string) {
+  return string.indexOf(caractere);
 }
-//dupleDados()
+
+// Teste
+//console.log(encontrarIndice('a', "Felipe Andrade")); // 3
 
 
 
@@ -71,10 +86,14 @@ function dupleDados(number = 9, text = "felipe andrade") {
 
 
 
-function verificarArrey(item, items) {
-  return items.includes(item)
+// Função para verificar se um item existe em um array:
+function verificarItemNoArray(item, array) {
+  return array.includes(item);
 }
-//console.log(verificarArrey("camisa", ['camisa', 'bermuda', "short"]))
+
+// Teste
+//console.log(verificarItemNoArray("camisa", ['camisa', 'bermuda', "short"])); // true
+
 
 /*
   06
@@ -84,12 +103,14 @@ function verificarArrey(item, items) {
 
 */
 
-/*function concatenaArrey(arrey1, arrey2) {
-  let arreySoma = [...arrey1, ...arrey2];
-  return arreySoma
-}*?
+// Função para concatenar dois arrays:
+function concatenarArrays(array1, array2) {
+  return array1.concat(array2);
+}
 
-//console.log(concatenaArrey([1, 2, 3, 4, 5], [12, 3, 2, 1]))
+// Teste
+//console.log(concatenarArrays([1, 2, 3], [4, 5, 6])); // [1, 2, 3, 4, 5, 6]
+
 
 /*
   07
@@ -99,12 +120,14 @@ function verificarArrey(item, items) {
 */
 
 
-function argurmentarArrey(arrey) {
-  return arrey.slice(0, -1)
+// Função para remover o último item de um array:
+function removerUltimoItem(array) {
+  return array.slice(0, -1);
 }
 
+// Teste
+//console.log(removerUltimoItem([1, 2, 3, 4, 5])); // [1, 2, 3, 4]
 
-console.log(argurmentarArrey([1, 2, 3, 4, 5, 6, 7, 8, 9]))
 
 
 /*
@@ -113,6 +136,16 @@ console.log(argurmentarArrey([1, 2, 3, 4, 5, 6, 7, 8, 9]))
   - Crie uma função que retorna se o valor passado como argumento em sua  
     invocação é null.
 */
+
+// Função para verificar se um valor é null:
+function verificarSeEhNull(valor) {
+  return valor === null;
+}
+
+// Teste
+//console.log(verificarSeEhNull(null)); // true
+//console.log(verificarSeEhNull(123)); // false
+
 
 /*
   09
@@ -125,6 +158,18 @@ console.log(argurmentarArrey([1, 2, 3, 4, 5, 6, 7, 8, 9]))
     foi exibido.
 */
 
+
+function invocarCallback(callback) { //criado funçao que vai ter como paramento o callback
+  callback()  //tranformando parametro em funçao
+}
+
+function ixibirNome() {  //Nova funçao que ira amazenar meu n0ome
+  //  console.log("Me chamo Felipe")
+}
+
+//invocarCallback(ixibirNome)  //Apos inforcar a funçao invocarCallback e inser o ixibirNome como argunmento, o ixibirNome subistituira no paranmetro callback, que agora sera ixibirNome
+
+
 /*
   10
  
@@ -135,6 +180,22 @@ console.log(argurmentarArrey([1, 2, 3, 4, 5, 6, 7, 8, 9]))
   - Faça com que a invocação da função descrita no 1º item deste exercício (10)  
     resulte no triplo de 33.
 */
+
+
+// Função que invoca uma função de callback recebida por parâmetro com um valor
+function invocarCallback2(callback, valor) {
+  return callback(valor);
+}
+
+// Função que retorna o triplo de um número recebido por parâmetro
+function triplo(numero) {
+  return numero * 3;
+}
+
+// Invocação da função descrita no 1º item do exercício para obter o triplo de 33
+console.log(invocarCallback2(triplo, 33));  // 99
+
+
 
 /*
   11
@@ -147,6 +208,17 @@ console.log(argurmentarArrey([1, 2, 3, 4, 5, 6, 7, 8, 9]))
 
 const numbers = [1, 2, 3]
 
+numbers.forEach((element, index, array) => {
+  //return console.log(`O ${[index + 1]}º item do array [${array.join(', ')}] é ${element}.`)
+  // element: o valor do elemento atual.
+  //index: o índice do elemento atual.
+  //array: o array completo
+})
+/*${index + 1}: o índice + 1, pois os índices em JavaScript começam em 0, mas a contagem de itens começa em 1.
+${array.join(', ')}: une todos os elementos do array em uma string separada por vírgulas.
+${element}: o valor do elemento atual.?*/
+
+
 /*
   12
  
@@ -158,9 +230,11 @@ const numbers = [1, 2, 3]
 const letters = ['v', 'e', 'p']
 let lettersCopy = []
 
-for (let i = 0; i < letters.length; i++) {
-  lettersCopy.push(letters[i])
-}
+letters.forEach((letters) => {
+  lettersCopy.push(letters)
+})
+
+//console.log(lettersCopy)
 
 /*
   13
@@ -191,7 +265,11 @@ const review = [
 
 let paragraphs = ''
 
-//section.innerHTML = paragraphs
+const createParagrapsh = paragraph => paragraphs += `<p>${paragraph}</p>`
+
+review.forEach(createParagrapsh)
+
+section.innerHTML = paragraphs
 
 /*
   14
@@ -213,3 +291,26 @@ let paragraphs = ''
     pelo restante da quantidade de pessoas que curtiram o post (além das duas  
     pessoas já mencionadas no início da mensagem).
 */
+
+
+const getLikwsMessage = (names = []) => {
+  const firtName = names[0]
+  const secondNome = names[1]
+  const thisdNomedNome = names[1]
+  const TotalNamesMinusTwor = names.length - 2
+
+  switch (names.length) {
+    case 0:
+      return `Nigem curtiu isso`
+    case 1:
+      return `${firtName} curtiu isso`
+    case 2:
+      return `${firtName} ${secondNome} curtiu isso`
+    case 3:
+      return `${firtName} ${secondNome} ${thisdNomedNome} curtirao isso`
+    default:
+      return `${firtName}, ${secondNome} e mais ${TotalNamesMinusTwor} pessoas curtiram isso`
+  }
+}
+
+console.log(getLikwsMessage(["Felipe", "Amanda", "Eduarda", "Marcelo"]))
