@@ -313,4 +313,4 @@ const getLikwsMessage = (names = []) => {
   }
 }
 
-console.log(getLikwsMessage(["Felipe", "Amanda", "Eduarda", "Marcelo"]))
+//console.log(getLikwsMessage(["Felipe", "Amanda", "Eduarda", "Marcelo"]))
