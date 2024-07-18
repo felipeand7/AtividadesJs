@@ -27,17 +27,23 @@ const best2019Movies = [
   { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
 ]
 
-let melhor=''
-best2019Movies.forEach( x =>  melhor+=`
- -${x.title} , dirigido por ${x.directedBy}`)
+let message = ` Segundo o site Omelete, os melhores filmes de 2019 são:`
 
-//console.log(` Segundo o site Omelete, os melhores filmes de 2019 são: ${melhor}`)
+best2019Movies.forEach(movie => {
+  message += `
+  - ${movie.title}, dirigido por ${movie.directedBy}`
+})
+
+console.log(message)
+
+
+
 /*
   02
-
+ 
   - No objeto abaixo, implemente um método que exibe a seguinte mensagem no 
     console:
-
+ 
     Vídeos recentes de Roger Melo:
     Introdução ao TDD - Parte 02 | JavaScript | Jest
     Introdução ao TDD | JavaScript | Jest
@@ -65,57 +71,70 @@ const youtubeUser = {
     },
     country: 'Brasil'
   },
-  expor(){
-     let video= 'Vídeos recentes de Roger Melo: '
-     this.videos.recentVideos.forEach( objeto => video+=` 
-${objeto.title}` )
-     console.log(video)
+  expor() {
+    console.log(`Vídeos recentes de ${this.name}:`)
+
+
+    this.videos.recentVideos.forEach(video => {
+      console.log(video.title)
+    })
+
+
   }
 }
 
 youtubeUser.expor()
+
+
 /*
   03
-
+ 
   - Exiba o valor do PI no console.
 */
 
 
+//console.log(Math.PI)
 
 /*
   04
-
+ 
   - Arredonde o número que a constante abaixo armazena para 9 e exiba-o no  
     console.
 */
 
 const firstNumber = 8.3
+//console.log(Math.ceil(firstNumber))
 
 /*
   05
-
+ 
   - Arredonde o número que a constante abaixo armazena para 4, utilizando a  
     forma padrão, e exiba-o no console.
 */
 
 const secondNumber = 3.5
+console.log(Math.ceil(secondNumber))
+
+
 
 /*
   06
-
+ 
   - Arredonde o número que a constante abaixo armazena para 8 e exiba-o no  
     console.
 */
 
 const thirdNumber = 8.9
+console.log(Math.floor(thirdNumber))
 
 /*
   07
-
+ 
   - Exiba no console o número abaixo com a parte decimal removida.
 */
 
 const fourthNumber = 5.5
+console.log(Math.trunc(fourthNumber))
 
 /*
   08
@@ -123,3 +142,5 @@ const fourthNumber = 5.5
   - A cada vez que o index.html for carregado, exiba no console um número  
     aleatório de 0 à 10, incluindo 0 e 10.
 */
+
+console.log(Math.floor(Math.random() * 10) + 1)

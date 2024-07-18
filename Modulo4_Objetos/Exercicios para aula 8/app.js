@@ -48,6 +48,8 @@ function infor(value) {
       "O NOME_DO_CARRO está disponível nas cores COR_01, COR_02 e COR_03".
 */
 
+
+
 const car = {
   name: "mustang",
   brand: "ferrari",
@@ -55,13 +57,18 @@ const car = {
   isRunning: false,
 
   run() {
-    console.log(`O ${car.name} esta em movimento`)
+    this.isRunning = true
+    return console.log(`O ${this.name} esta em movimento`)
   },
   stop() {
-    console.log(`O ${car.name} esta  parado`)
+    this.isRunning = false
+    return console.log(`O ${this.name} esta  parado`)
   },
   getColorsMessage() {
-    console.log(`O ${car.name} está disponível nas cores ${car.colors[0]}, ${car.colors[1]} é ${car.colors[2]}`)
+    const lestItem = this.colors[this.colors.length - 1]
+    const colors = this.colors.join(", ").replace(lestItem, `e ${lestItem}`)
+
+    return console.log(`O ${this.name} está disponível nas cores ${colors}`)
   }
 }
 
