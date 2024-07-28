@@ -12,7 +12,11 @@ const getCatInfo = () => {
   const name = 'Marcos'
   let age = 3
   const color = 'Cinza'
+
+  return { name, age, color }
 }
+const { name, age, color } = getCatInfo()
+//console.log(` ${name} é um ${color} de ${age} anos.`)
 
 /*
   02
@@ -29,9 +33,10 @@ const external = () => {
     const extraInternal = () => {
       console.log(movie.toUpperCase())
     }
+    extraInternal()
   }
+  internal()
 }
-
 external()
 
 /*
@@ -44,6 +49,12 @@ external()
 */
 
 let randomNumbers = [3, 2, 1]
+randomNumbers.reverse()
+
+//console.log(randomNumbers)
+
+
+
 
 /*
   04
@@ -55,9 +66,11 @@ let randomNumbers = [3, 2, 1]
 
 let crazyArray = [
   { prop1: '1', prop2: '2' },
-  function getMessage () { return 'hi' },
-  [ 5, 96, 53  ]
+  function getMessage() { return 'hi' },
+  [5, 96, 53]
 ]
+crazyArray.shift()
+//console.log(crazyArray)
 
 /*
   05
@@ -74,8 +87,11 @@ const dogs = [
   { name: 'Jade', age: 4, gender: 'Female', breed: 'Shiba inu' },
   { name: 'Zequinha', age: 7, gender: 'Male', breed: 'Poodle' },
   { name: 'Xica', age: 6, gender: 'Female', breed: 'Chihuahua' }
-]
 
+]
+const Zequinha = dogs.find((dog) => dog.name === 'Zequinha')
+
+//console.log(Zequinha)
 /*
   06
 
@@ -108,6 +124,9 @@ const dogs = [
   </section>
 */
 
+const titulo = document.querySelector('.main-title')
+console.log(titulo)
+
 /*
   07
 
@@ -115,3 +134,7 @@ const dogs = [
     página, através da classe deles;
   - Exiba esse NodeList no console.
 */
+
+const subs = document.querySelectorAll('.secondary-title')
+
+console.log(subs)

@@ -33,8 +33,7 @@ best2019Movies.forEach(movie => {
   message += `
   - ${movie.title}, dirigido por ${movie.directedBy}`
 })
-
-console.log(message)
+//console.log(message)
 
 
 
@@ -74,16 +73,12 @@ const youtubeUser = {
   expor() {
     console.log(`Vídeos recentes de ${this.name}:`)
 
-
     this.videos.recentVideos.forEach(video => {
       console.log(video.title)
     })
-
-
   }
 }
-
-youtubeUser.expor()
+//youtubeUser.expor()
 
 
 /*
