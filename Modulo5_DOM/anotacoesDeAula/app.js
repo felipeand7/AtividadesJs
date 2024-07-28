@@ -21,7 +21,8 @@ lis.forEach((li => {
     const clickedElement = event.target
     const virificarClass = clickedElement.innerText
     const addClass = clickedElement.classList
-    event.stopPropagation
+
+    event.stopPropagation()// o evento não ira se propagar para o pai que o ul
 
     if (virificarClass.includes('error')) {
       addClass.toggle('error');

@@ -57,7 +57,7 @@ const h1 = document.querySelector('h1')
 const lis = document.querySelectorAll('li')
 
 const showClickedLi = event => {
-  console.log(event.target)
+  console.log(event.target) // target isibira o elemento clicado 
 }
 
 const addClickEvent = li => {
@@ -90,6 +90,7 @@ const button = document.querySelector('button')
 
 const insertVideoLi = ({ name }) => {
   ul.innerHTML += (`<li>${name}</li>`)
+
 }
 
 const handleClickButton = () => {
