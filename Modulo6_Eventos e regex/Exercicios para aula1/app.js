@@ -5,30 +5,60 @@
     'Clicou na div.' não seja exibida no console.
 */
 
+
+// elementsInsideDiv.forEach(element => {
+//   element.addEventListener('click', (event) => {
+//     event.stopPropagation()  // evita que esse evento se propague para o pai
+//     h2.textContent = `clicou no ${event.target.tagName.toLowerCase()} filho da div`
+//   })
+// })
+
+//CODIGO FATORADO
 const div = document.querySelector('div')
 const elementsInsideDiv = Array.from(div.children)
+const h2 = document.querySelector('h2')
+const button = document.querySelector('button')
+const egg = document.querySelector('.egg')
 
-elementsInsideDiv.forEach(element => {
-  element.addEventListener('click', () => {
-    console.log('Clicou no filho da div.')
-  })
-})
 
-div.addEventListener('click', () => {
-  console.log('Clicou na div.')
-})
+const showClickedeElement = ({ target }) => {
+  const clickedElementName = target.tagName.toLowerCase()
+
+  if (clickedElementName === 'div') {
+    h2.textContent = `clicou na div`
+    return
+  }
+  h2.textContent = `clicou no ${event.target.tagName.toLowerCase()} filho da div`
+}
+
+
+const copyh2 = () => {
+  console.log('Texto copiado!')
+}
+
+const mouseMove = ({ offsetX, offsetY }) => {
+  egg.textContent = `X: ${offsetX} - Y: ${offsetY}`
+}
+
+const mudarColorOvo = () => {
+  egg.style.background = 'lightgoldenrodyellow'
+}
+
+div.addEventListener('click', showClickedeElement)
+h2.addEventListener('copy', copyh2)
+egg.addEventListener('mousemove', mouseMove)
+button.addEventListener('click', mudarColorOvo)
+
+
+
 
 /*
   02
-
   - No código acima, faça com que quando um filho da div for clicado, a mensagem  
     exibida no console seja "Clicou no NOME_DA_TAG_COM_LETRAS_MINÚSCULAS, filho
     da div.".
-*/
 
-/*
   03
-
   - No index.html, abaixo da div sem classe, insira um h2;
   - Faça com que a mensagem de clique na div e a mensagem de clique em algum
     filho da div, ao invés de ser exibida no console, seja inserida neste h2.
@@ -76,3 +106,10 @@ const people = [
   { id: 8, name: 'Matheus Manucci', profession: 'Piloto' },
   { id: 9, name: 'Hamilton Silva', profession: 'Advogado' }
 ]
+
+const isSomePersonFrontendDeveloper = people.some(({ profession }) =>
+  profession === 'Front-end developer')
+
+if (isSomePersonFrontendDeveloper) {
+  console.log(`O array people contém, no mínimo, um(a) Front-end developer`)
+}
