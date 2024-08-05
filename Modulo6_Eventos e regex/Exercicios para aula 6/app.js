@@ -4,35 +4,35 @@
   - No envio do form, faça com que a página não seja recarregada.
 */
 
-const form = document.getElementById('form')
+//target passa a referencia do elemento
 
-const clearInput = () => {
-  input.value = ''
-  input.focus()
-}
+// const form = document.getElementById('form')
 
-const logMessagen = (messagen) => {
-  console.log(messagen)
-  clearInput()
+// const clearInput = () => {
+//   input.value = ''
+//   input.focus()
+// }
 
-}
+// const logMessagen = (messagen) => {
+//   console.log(messagen)
+//   clearInput()
 
+// }
 
-const handleSubmit = event => {
-  event.preventDefault()
+// const handleSubmit = event => {
+//   event.preventDefault()
 
-  const input = event.target.input
-  const regex = /[a-zA-Z0-9]{7,11}/
-  const textRegex = regex.test(input.value)
+//   const input = event.target.input
+//   const regex = /[a-zA-Z0-9]{7,11}/
+//   const textRegex = regex.test(input.value)
 
-  if (textRegex) {
-    logMessagen('O valor inserido no innput e valido')
-    return
-  }
-  logMessagen('Valor invalido =(')
-}
-
-form.addEventListener('submit', handleSubmit)
+//   if (textRegex) {
+//     logMessagen('O valor inserido no innput e valido')
+//     return
+//   }
+//   logMessagen('Valor invalido =(')
+// }
+// form.addEventListener('submit', handleSubmit)
 
 
 /*
@@ -126,3 +126,38 @@ form.addEventListener('submit', handleSubmit)
     - "eich_1961" não é um valor válido, pois contém um caractere especial.
 */
 
+
+
+const form = document.getElementById('form')
+const regex = username => /^[a-zA-Z]{6,12}$/.test(username)
+
+
+//submit  
+form.addEventListener('submit', event => {
+  event.preventDefault() // não deixa a pagina recarregar 
+
+  const input = event.target.input.value
+  const textRegex = regex(input)
+  const fedback = document.querySelector('.fedback')
+
+  if (textRegex) {
+    fedback.textContent = 'Aprovado'
+    return
+  }
+  fedback.textContent = 'acesso negado'
+})
+
+
+//mudar cor de input de acordo com oque foi digitado para p usuario 
+form.addEventListener('keyup', event => {
+  const isAValididUsername = regex(event.target.value)
+  console.log(isAValididUsername)
+
+  if (isAValididUsername) {
+    form.setAttribute('class', 'success') // add e remove class 
+    return
+  }
+
+  form.setAttribute('class', 'error')
+
+})
