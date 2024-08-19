@@ -6,6 +6,9 @@
 */
 
 const myString = '    JS      '
+// console.log(myString)
+let removeEspaço = myString.trim()
+// console.log(removeEspaço)
 
 /*
   02
@@ -16,12 +19,17 @@ const myString = '    JS      '
   - Exiba o array ordenado no console.
 */
 
-const people = [
+const peoples = [
   { firstName: 'Estevão', lastName: 'Rodriguez', score: 90 },
   { firstName: 'José', lastName: 'Antônio', score: 100 },
   { firstName: 'Felipe', lastName: 'Tavares', score: 71 },
   { firstName: 'Eric', lastName: 'Silva', score: 82 }
 ]
+
+
+
+let test = peoples.sort((a, b) => a - b)
+//console.log(test)
 
 /*
   03
@@ -34,6 +42,8 @@ const people = [
 */
 
 const animals = ['cão', 'gato', 'boi', 'leão', 'gnu', 'alce', 'ema']
+const atividade03 = animals.filter(nome => nome.length === 3)
+//]console.log(atividade03)
 
 /*
   04
@@ -41,6 +51,8 @@ const animals = ['cão', 'gato', 'boi', 'leão', 'gnu', 'alce', 'ema']
   - Baseado no array "animals", gere um novo array com a quantidade de letras do 
     nome de cada animal. Ex.: [6, 8, 2].
 */
+const atividade04 = animals.map(animal => animal.length)
+//console.log(atividade04)
 
 
 
@@ -59,7 +71,10 @@ const friends = [
   { id: 4, name: 'Nilson', nearMe: true },
   { id: 5, name: 'Solange', nearMe: false }
 ]
-
+const atividade05 = friends.filter(a => a.nearMe === true).map(b => {
+  return b.name
+})
+//console.log(atividade05)
 
 
 /*
@@ -70,6 +85,8 @@ const friends = [
 */
 
 const numbers = [46, 86, 212, 29, 51, 9, 25, 42, 81]
+const atividade06 = numbers.filter(number => number % 2 !== 0).reduce((number, result) => number + result)
+//console.log(atividade06)
 
 /*
   07
@@ -78,7 +95,7 @@ const numbers = [46, 86, 212, 29, 51, 9, 25, 42, 81]
     países, exceto a China.
 */
 
-const data = [{
+const datas = [{
   country: 'China',
   population: 1409517397
 }, {
@@ -91,3 +108,6 @@ const data = [{
   country: 'Indonesia',
   population: 263991379
 }]
+
+const atividade07 = datas.filter(data => data.country !== 'China').reduce((a, total) => a + total.population, 0)
+console.log(atividade07)

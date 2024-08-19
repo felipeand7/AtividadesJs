@@ -7,6 +7,9 @@
 */
 
 const names = ['Caio', 'André', 'Dário']
+const ativida01 = names.sort()
+//console.log(ativida01)
+
 
 /*
   02
@@ -22,6 +25,8 @@ const characters = [
   { id: 01, name: 'Scar' },
   { id: 04, name: 'Mufasa' }
 ]
+const ativida02 = [...characters].sort((a, b) => a.id - b.id)
+// console.log(ativida02)
 
 /*
   03
@@ -32,6 +37,8 @@ const characters = [
 */
 
 const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291]
+const atividade03 = [...numbers].sort((a, b) => a - b)
+// console.log(atividade03)
 
 /*
   04
@@ -40,6 +47,8 @@ const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291]
 */
 
 const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70]
+const ativida04 = randomNumbers.find(number => number > 50)
+//console.log(ativida04)
 
 /*
   05
@@ -50,6 +59,8 @@ const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70]
 */
 
 const people = ['Cauã', 'Alfredo', 'Bruno']
+const ativida05 = people.sort().reverse()
+//console.log(ativida05)
 
 /*
   06
@@ -60,6 +71,8 @@ const people = ['Cauã', 'Alfredo', 'Bruno']
 */
 
 const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
+const ativida06 = ingredients.map(ingredient => `${ingredient} cozida`)
+//console.log(ativida06)
 
 /*
   07
@@ -80,6 +93,8 @@ const topBrazilmovies = [
   { title: 'Os Vingadores', peopleAmount: 10968065, distributedBy: 'Disney' },
   { title: 'Dona Flor e Seus Dois Maridos', peopleAmount: 10735524, distributedBy: 'Embrafilme' }
 ]
+const ativida07 = topBrazilmovies.filter(filme => filme.distributedBy === 'Disney').reduce((total, pessoas) => pessoas.peopleAmount + total, 0)
+//console.log(ativida07)
 
 /*
   08
@@ -100,6 +115,11 @@ const pets = [
   { name: 'Cristal', age: 3, gender: 'Female', type: 'Dog' },
   { name: 'Chico', age: 6, gender: 'Male', type: 'Dog' }
 ]
+pets.forEach(pet => {
+  pet.age = pet.age * 7
+})
+//console.log(pets)
+
 
 /*
   09
@@ -107,6 +127,15 @@ const pets = [
   - Considerando o array topBrazilmovies, através do map ou do reduce, insira 
     os nomes dos filmes na ul do index.html.
 */
+
+const ul = document.querySelector('.list-group')
+
+topBrazilmovies.map(filme => {
+  const list = document.createElement('li')
+  list.textContent = filme.title
+  return list
+
+}).forEach(list => ul.appendChild(list))
 
 /*
   10

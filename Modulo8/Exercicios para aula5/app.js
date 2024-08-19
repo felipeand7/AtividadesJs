@@ -3,7 +3,6 @@
 
   - Insira apenas o css do bootstrap no index.html.
 */
-
 /* 
   02
 
@@ -11,7 +10,9 @@
     mensagem "Um segundo e meio se passaram desde que a página foi carregada".
 */
 
-
+setTimeout(() => {
+  console.log("Um segundo e meio se passaram desde que a página foi carregada")
+}, 1500)
 
 /* 
   03
@@ -20,6 +21,33 @@
   - O clique no botão "Parar contador" deve fazer com que o contador exiba 0.
 */
 
+const buttonStart = document.querySelector('.button-start')
+const buttonStop = document.querySelector('.button-stop')
+const counterH1 = document.querySelector('.counter-container')
+
+
+let timer = 0
+let intervalID;
+
+buttonStart.addEventListener('click', (event) => {
+  event.preventDefault()
+
+  intervalID = setInterval(() => {
+    timer += 1
+    counterH1.textContent = timer
+  }, 500)
+})
+
+buttonStop.addEventListener('click', (event) => {
+  event.preventDefault()
+
+
+  clearInterval(intervalID)
+
+  timer = 0
+  counterH1.textContent = timer
+
+})
 
 
 /* 
